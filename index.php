@@ -5,14 +5,14 @@
 include "db_connect.php";
 
 // Makes query with td-id
-$query = "SELECT td_id, * FROM tbl_tudien ORDER BY td_tv ASC";
+$query = "SELECT td_id, * FROM tbl_tudien ORDER BY td_id DESC";
 
 // Run the query and set query result in $result
 // Here $db comes from "db_connection.php"
 $result = $db->query($query);
 
 //
-$querylastrow = "SELECT td_id, * FROM tbl_tudien ORDER BY td_tv ASC";
+$querylastrow = "SELECT td_id, * FROM tbl_tudien ORDER BY td_id DESC";
 $resultlastrow = $db->query($querylastrow);
 
 //
@@ -66,63 +66,32 @@ include "inc/cards-component.php";
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-
-<thead>
-                                        <tr>
-                                            <th>id</th>
-                                            <th>tvtv</th>
-                                            <th>td_ts</th>
-                                            <th>mtmt</th>
-
-                                            <th>loai</th>
-                                            <th>chude</th>
-                                            <th>creat</th>
-                                            <th>update</th>
-                                            <th>ta</th>
-                                            <th>action</th>
-                                            
-                                        </tr>
-                                    </thead>
-                                     <tfoot>
-                                        <tr>
-                                            <th>id</th>
-                                            <th>tv</th>
-                                            <th>td_ts</th>
-                                            <th>mtmt</th>
-
-                                            <th>a</th>
-                                            <th>a</th>
-                                            <th>a</th>
-                                            <th>a</th>
-                                            <th>a</th>
-                                            <th>action</th>
-                                           
-                                        </tr>
-                                    </tfoot>
-                                     <tbody>
+                                <div class="table table-bordered" id="dataTablex">
+                                     
 
                                    <?php
 while ($row = $result->fetchArray()) { ++$soHangDemDuoc;
 ?>
-          
+           <hr>
             <tr>
-                <td><?php
+                <!--td class="d-none" display="hide"><?php
     echo $row['td_id'];
-?></td>
-                <th scope="row"><a href="search.php?s=<?php
+?></td-->
+
+<td><?php
+    echo $row['td_ts'];
+?></td> - 
+                <small><a href="search.php?s=<?php
     echo $row['td_tv'];
 ?>"><?php
     echo $row['td_tv'];
-?></a> </th>
+?></a> </small>
                 
-                <td><?php
-    echo $row['td_ts'];
-?></td>
                 
+                </br>
                 <td><?php
     if ($row['td_mt']) {
-        echo "<pre class='alert alert-success border-left-primary'>" . $row['td_mt'] . "</pre>";
+        echo "<pre class='alert alert-success'>" . $row['td_mt'] . "</pre>";
     }
 ?></td>
                 
@@ -138,7 +107,7 @@ echo $row['td_update'];
 ?></td><td><?php
 echo $row['td_ta'];
 ?></td>
-
+ </br>
                 <td>
                     <a href="search.php?s=<?php
     echo $row['td_tv'];
@@ -160,7 +129,7 @@ echo $row['td_ta'];
 ?>
 
                                    
-                                </table>
+                                </div>
                             </div>
                         </div>
                     </div>
