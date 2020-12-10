@@ -71,7 +71,7 @@ include "inc/topbar.php";
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Insert Page</h1>
+                    <h1 class="h3 mb-4 text-gray-800">Creat/Insert Data</h1>
 
 
 
@@ -107,12 +107,16 @@ include "inc/topbar.php";
                             </div-->
 
                             <div class="form-group">
-    <label for="x">Loại</label>
+    <label for="x">Loại td_loai</label>
     <select class="form-control"  name="td_loai" id="exampleFormControlSelect1">
     <option  value=""></option>
       <option  value="Từ">Từ</option>
       <option  value="câu">Câu</option>
       <option  value="Cụm từ">Cụm từ</option>
+      <option  value="Danh từ">Danh từ</option>
+      <option  value="Động từ">Động từ</option>
+      <option  value="Trạng từ">Trạng từ</option>
+
       
     </select>
   </div>
@@ -128,34 +132,35 @@ include "inc/topbar.php";
     <label for="x">td_chude</label>
     <select name="td_chude"  class="form-control" id="exampleFormControlSelect1">
     <option  value=""></option>
-      <option  value="1">Nail</option>
+      <option  value="Nail">Nail</option>
       <option  value="Cuộc sống">Cuộc sống</option>
       <option  value="Cơ bản">Cơ bản</option>
+      <option  value="Nâng cao">Nâng cao</option>
       
     </select>
   </div>
 
                             <div class="form-group">
-                            <label for="xxx">td_creat</label>
-                            <input name="td_creat" type="text" class="form-control " value="<?php echo date("Y-m-d h:i:s A"); ?>" readonly>
+                            <label for="xxx">Ngày tạo td_creat</label>
+                            <input name="td_creat" type="text" class="form-control alert-warning" value="<?php echo date("Y-m-d h:i:s A"); ?>" readonly>
                             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                             </div>
                             <div class="form-group">
-                            <label for="xxx">td_update</label>
-                            <input name="td_update" type="text" class="form-control" readonly>
+                            <label for="xxx">Ngày cập nhật td_update</label>
+                            <input name="td_update" type="text" class="form-control alert-danger" readonly>
                             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                             </div>
                             <div class="form-group">
-                            <label for="xxx">td_ta</label>
+                            <label for="xxx">Từng vựng tiếng Anh td_ta</label>
                             <input name="td_ta" type="text" class="form-control">
                             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                             </div>
 
 
                             
-                            <button name="submit_data" type="submit" class="btn btn-sm btn-primary text-center">Submit And Return</button>
+                            <button name="submit_data" type="submit" class="btn btn-sm btn-primary text-center m-2">Submit And Return</button>
                         
-                            <button name="submit_data_and_backhome" type="submit" class="btn btn-sm btn-primary mx-3">Submit Data And Backhome</button>
+                            <button name="submit_data_and_backhome" type="submit" class="btn btn-sm btn-primary m-2">Submit Data And Backhome</button>
                             
                         
                         </form>

@@ -88,7 +88,7 @@ include "inc/topbar.php";
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">edit Page</h1>
+                    <h1 class="h3 mb-4 text-gray-800">Edit/Update Page</h1>
 
 
 				         <table class="table table-responsive table-striped">
@@ -126,7 +126,7 @@ include "inc/topbar.php";
 
                             <div class="form-group">
     <label for="x">Loại</label>
-    <select class="form-control"  name="td_loai" id="exampleFormControlSelect1">
+    <select class="form-control  alert-danger"  name="td_loai" id="exampleFormControlSelect1">
     <option  value="<?php echo $data['td_loai']; ?>"><?php echo $data['td_loai']; ?> - curent</option>
       <option  value="Từ">Từ</option>
       <option  value="câu">Câu</option>
@@ -139,7 +139,7 @@ include "inc/topbar.php";
 
   <div class="form-group">
     <label for="x">td_chude</label>
-    <select name="td_chude"  class="form-control" id="exampleFormControlSelect1">
+    <select name="td_chude"  class="form-control  alert-info" id="exampleFormControlSelect1">
     <option  value=""></option>
       <option  value="1">Nail</option>
       <option  value="Cuộc sống">Cuộc sống</option>

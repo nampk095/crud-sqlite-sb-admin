@@ -40,16 +40,15 @@ include "inc/topbar.php";
 include "inc/cards-component.php";
 ?-->
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Tables</h1>
-                    <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
-                        For more information about DataTables, please visit the <a target="_blank"
-                            href="https://datatables.net">official DataTables documentation</a>.</p>
+                    <h1 class="h3 mb-2 text-gray-800">Cơ sở dữ liệu</h1>
+                    <p class="mb-4">Đây là cơ sở dữ liệu từ điển cơ bản <a target="_blank"
+                            href="https://minhquydesign.com">@minhquydesign</a>.</p>
 
                             <p class="mb-4"><a href="insert.php" class="btn btn-primary btn-icon-split">
                                         <span class="icon text-white-50">
-                                            <i class="fas fa-flag"></i>
+                                            <i class="fas fa-plus"></i>
                                         </span>
-                                        <span class="text">ADD TỪ ĐIỂN</span>
+                                        <span class="text">TỪ ĐIỂN</span>
                                     </a>
                                     <a href="#" class="btn btn-success btn-icon-split">
                                         <span class="icon text-white-50">
@@ -72,11 +71,11 @@ include "inc/cards-component.php";
                                    <?php
 while ($row = $result->fetchArray()) { ++$soHangDemDuoc;
 ?>
-           <hr>
-            <tr>
-                <!--td class="d-none" display="hide"><?php
+           
+            
+            <!--code><?php
     echo $row['td_id'];
-?></td-->
+?></code></br-->
 
 <td><?php
     echo $row['td_ts'];
@@ -91,16 +90,17 @@ while ($row = $result->fetchArray()) { ++$soHangDemDuoc;
                 </br>
                 <td><?php
     if ($row['td_mt']) {
-        echo "<pre class='alert alert-success'>" . $row['td_mt'] . "</pre>";
+        echo "<pre class='alert alert-success border-left-info mt-2'>" . $row['td_mt'] . "</pre>";
     }
 ?></td>
                 
-                <td ><button class="btn btn-primary" ><?php
+                <td ><button class="btn btn-sm btn-primaryx border-left-warning bg-gray-100" ><?php
     echo $row['td_loai'];
 ?></button></td>
-<td><?php
+
+<td><button class="btn btn-sm btn-primaryx border-left-info bg-gray-100 mx-2" ><?php
     echo $row['td_chude'];
-?></td><td><?php
+?></button><td><?php
 echo $row['td_creat'];
 ?></td><td><?php
 echo $row['td_update'];
@@ -111,7 +111,7 @@ echo $row['td_ta'];
                 <td>
                     <a href="search.php?s=<?php
     echo $row['td_tv'];
-?>" class="btn btn-success m-1 btn-sm">Search</a> |
+?>" class="btn btn-info m-1 btn-sm">Search</a> |
                     <a href="update.php?id=<?php
     echo $row['td_id'];
 ?>" class="btn btn-primary m-1 btn-sm">Edit</a> | 
@@ -123,7 +123,8 @@ echo $row['td_ta'];
     echo $row['td_id'];
 ?>" onclick="return confirm('Are you sure?');" class="btn btn-default m-1 btn-sm">Delete</a>
                 </td>
-            </tr>
+            
+            <hr>
             <?php
 }
 ?>

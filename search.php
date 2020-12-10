@@ -10,7 +10,7 @@ $ss=$_GET['s'];
 
 
 // Makes query with rowid
-$query = "SELECT rowid, * FROM tbl_tudien WHERE td_tv  LIKE '%$ss%'";
+$query = "SELECT td_id, * FROM tbl_tudien WHERE td_tv  LIKE '%$ss%'";
 
 // Run the query and set query result in $result
 // Here $db comes from db_connection.php
@@ -27,36 +27,106 @@ include "inc/topbar.php";
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Blank Page</h1>
+                    <h1 class="h3 mb-4 text-gray-800">Search Page</h1>
 
 
-						<table class="table table-sm table-responsive table-striped table-hover">
-								    <caption>List of data by id</caption>
-								    <thead>
-									<tr>
-									    <th>ID</th>
-										<th>Name</th>
-										<th>Email</th>
-										<th>Email2</th>
-										<th>Action</th>
-									</tr>
-									</thead>
-									<tbody>
-									<?php while($row = $result->fetchArray()) {?>
-									<tr>
-									    <td><?php echo $row['td_id'];?></td>
-										<td><a href="search.php?s=<?php echo $row['td_tv'];?>"><?php echo $row['td_tv'];?></a> </td>
-										<td><?php echo $row['td_ts'];?></td>
-										<td><pre class="alert alert-success" style="font-family:Roboto"><?php echo $row['td_mt'];?></pre></td>
-										<td>
-											<a href="view.php?id=<?php echo $row['td_id'];?>">View</a> | 
-											<a href="update.php?id=<?php echo $row['td_id'];?>">Edit</a> | 
-											<a href="delete.php?id=<?php echo $row['td_id'];?>" onclick="return confirm('Are you sure?');">Delete</a>
-										</td>
-									</tr>
-									<?php } ?>
-									</tbody>
-								</table>
+					<div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+
+<thead>
+                                        <tr>
+                                            <th>id</th>
+                                            <th>tvtv</th>
+                                            <th>td_ts</th>
+                                            <th>mtmt</th>
+
+                                            <th>loai</th>
+                                            <th>chude</th>
+                                            <th>creat</th>
+                                            <th>update</th>
+                                            <th>ta</th>
+                                            <th>action</th>
+                                            
+                                        </tr>
+                                    </thead>
+                                     <tfoot>
+                                        <tr>
+                                            <th>id</th>
+                                            <th>tv</th>
+                                            <th>td_ts</th>
+                                            <th>mtmt</th>
+
+                                            <th>a</th>
+                                            <th>a</th>
+                                            <th>a</th>
+                                            <th>a</th>
+                                            <th>a</th>
+                                            <th>action</th>
+                                           
+                                        </tr>
+                                    </tfoot>
+                                     <tbody>
+
+                                   <?php
+while ($row = $result->fetchArray()) {
+?>
+          
+            <tr>
+                <td><?php
+    echo $row['td_id'];
+?></td>
+                <th scope="row"><a href="search.php?s=<?php
+    echo $row['td_tv'];
+?>"><?php
+    echo $row['td_tv'];
+?></a> </th>
+                
+                <td><?php
+    echo $row['td_ts'];
+?></td>
+                
+                <td><?php
+    if ($row['td_mt']) {
+        echo "<pre class='alert alert-success border-left-primary'>" . $row['td_mt'] . "</pre>";
+    }
+?></td>
+                
+                <td ><button class="btn btn-primary" ><?php
+    echo $row['td_loai'];
+?></button></td>
+<td><?php
+    echo $row['td_chude'];
+?></td><td><?php
+echo $row['td_creat'];
+?></td><td><?php
+echo $row['td_update'];
+?></td><td><?php
+echo $row['td_ta'];
+?></td>
+
+                <td>
+                    <a href="search.php?s=<?php
+    echo $row['td_tv'];
+?>" class="btn btn-success m-1 btn-sm">Search</a> |
+                    <a href="update.php?id=<?php
+    echo $row['td_id'];
+?>" class="btn btn-primary m-1 btn-sm">Edit</a> | 
+                    <a href="view.php?id=<?php
+    echo $row['td_id'];
+?>" class="btn btn-success m-1 btn-sm">view</a> |
+                    
+                    <a href="delete.php?id=<?php
+    echo $row['td_id'];
+?>" onclick="return confirm('Are you sure?');" class="btn btn-default m-1 btn-sm">Delete</a>
+                </td>
+            </tr>
+            <?php
+}
+?>
+
+                                   
+                                </table>
+                            </div>
 
 
                 </div>

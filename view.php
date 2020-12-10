@@ -25,40 +25,40 @@ include "inc/topbar.php";
 
 					    <div class="VIEW p-2 m-2 text-center">
 								<div>
-								<div class="form-group text-center">
-								id - <?php echo $id;?>
+								<div class="form-group text-center border-bottom-danger">
+								<small>id </small></br> <?php echo $id;?>
 							</div>
-								<div class="form-group text-center">
-									<label for="xxx">Tiếng Việt</label>
+								<div class="form-group text-center border-bottom-success">
+									<small>Tiếng Việt</small></br>
 									<?php echo $data['td_tv'];?>
 								</div>
-								<div class="form-group">
-									<label for="xxx">Tiếng Slovak</label>
+								<div class="form-group border-bottom-info">
+									<small for="xxx">Tiếng Slovak</small></br>
 									<?php echo $data['td_ts'];?>
 								</div>
 								<div class="form-group alert alert-info">
-									<label for="xxx">Mô tả</label>
+									<small for="xxx">Mô tả/ghi chú</small></br>
 									<?php echo $data['td_mt'];?>
 								</div>
 
-								<div class="form-group alert alert-info">
-									<label for="xxx">Loại</label>
+								<div class="form-group alert alert-success">
+									<small for="xxx">Loại</small></br>
 									<?php echo $data['td_loai'];?>
 								</div>
 								<div class="form-group alert alert-info">
-									<label for="xxx">Chủ đề</label>
+									<small for="xxx">Chủ đề</small></br>
 									<?php echo $data['td_chude'];?>
 								</div>
-								<div class="form-group alert alert-info">
-									<label for="xxx">created time*</label>
+								<div class="form-group alert alert-default">
+									<small for="xxx">Created Time</small></br>
 									<?php echo $data['td_creat'];?>
 								</div>
 								<div class="form-group alert alert-info">
-									<label for="xxx">update time</label>
+									<small for="xxx">Time Update</small></br>
 									<?php echo $data['td_update'];?>
 								</div>
 								<div class="form-group alert alert-info">
-									<label for="xxx">ta</label>
+									<small for="xxx">Tiếng Anh</small></br>
 									<?php echo $data['td_ta'];?>
 								</div>
 

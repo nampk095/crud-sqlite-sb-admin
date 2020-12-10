@@ -1,6 +1,6 @@
 <?php
 // Database name
-$database_name = "tbl_tudien_demo6.db";
+$database_name = "tbl_tudien.db";
 
 // Database Connection
 $db = new SQLite3($database_name);

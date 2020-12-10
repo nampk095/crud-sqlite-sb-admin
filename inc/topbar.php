@@ -54,7 +54,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="index.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Index</span></a>
+                    <span>Anlytic</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="list.php">
@@ -64,29 +64,41 @@
             <li class="nav-item">
                 <a class="nav-link" href="list-iddesc.php">
                     <i class="fas fa-fw fa-list"></i>
-                    <span>List id DESC</span></a>
+                    <span>List DESC</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="table.php">
-                    <i class="fas fa-fw fa-iddesc"></i>
+                    <i class="fas fa-fw fa-table"></i>
                     <span>Table</span></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="table-iddesc.php">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>table id DESC</span></a>
-            </li>
+            
 
             <!-- Divider -->
             <hr class="sidebar-divider">
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Interface
+                DEMO
             </div>
 
+             <!-- Nav Item - Pages Collapse Menu -->
+             <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMenu"
+                    aria-expanded="true" aria-controls="collapseMenu">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Menu Demo</span>
+                </a>
+                <div id="collapseMenu" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom menu:</h6>
+                        <a class="collapse-item" href="#">Buttons</a>
+                        <a class="collapse-item" href="#">Cards</a>
+                    </div>
+                </div>
+            </li>
+
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
+            <!--li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
@@ -99,7 +111,7 @@
                         <a class="collapse-item" href="cards.html">Cards</a>
                     </div>
                 </div>
-            </li>
+            </li-->
 
             <!-- 2 Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
@@ -110,10 +122,10 @@
                 </a>
                 <div id="collapseTable" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Components:</h6>
+                        <h6 class="collapse-header">Custom table:</h6>
                         <a class="collapse-item" href="table.php">Default</a>
-                        <a class="collapse-item" href="table-iddesc.php">ID DESC</a>
-                        <a class="collapse-item" href="table-datatable.php">Table Datatable</a>
+                        <a class="collapse-item" href="table-iddesc.php">DESC</a>
+                        <a class="collapse-item" href="table-datatable.php">Datatablejs</a>
                     </div>
                 </div>
             </li>
@@ -212,7 +224,7 @@
                         action="search.php" METHOD="GET">
                         <div class="input-group">
                             <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                aria-label="Search" aria-describedby="basic-addon2" name="id">
+                                aria-label="Search" aria-describedby="basic-addon2" name="s">
                             <div class="input-group-append">
                                 <button class="btn btn-primary" type="submit">
                                     <i class="fas fa-search fa-sm"></i>
@@ -353,8 +365,7 @@
                                         <div class="status-indicator bg-success"></div>
                                     </div>
                                     <div>
-                                        <div class="text-truncate">Am I a good boy? The reason I ask is because someone
-                                            told me that people say this to all dogs, even if they aren't good...</div>
+                                        <div class="text-truncate">Tôi có phải là một cậu bé tốt không? Lý do tôi hỏi là vì ai đó đã nói với tôi rằng mọi người nói điều này với tất cả các con chó, ngay cả khi chúng không tốt ...</div>
                                         <div class="small text-gray-500">Chicken the Dog · 2w</div>
                                     </div>
                                 </a>
@@ -368,7 +379,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Minh Quy Design</span>
                                 <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
